@@ -4,13 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Horizondroid stuff.
+# Inherit some common Lineage stuff.
 TARGET_DISABLE_EPPE := true
+TARGET_HAS_UDFPS := true
 DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/google/shusky/aosp-horizon_shiba.mk)
+$(call inherit-product, device/google/shusky/aosp_shiba.mk)
 $(call inherit-product, device/google/zuma/lineage_common.mk)
 
 include device/google/shusky/shiba/device-lineage.mk
@@ -18,21 +19,7 @@ include device/google/shusky/shiba/device-lineage.mk
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 8
-PRODUCT_NAME := aosp_shiba
-
-# Horizondroid Flags
-WITH_GMS := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_QUICK_TAP  := true
-TARGET_ENABLE_BLUR := true
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_BUILD_VIMUSIC := false
-TARGET_BUILD_INNERTUNE := true
-
-# Horizon stuff.
-HORIZON_MAINTAINER := JYR_RC-SuperXorn
+PRODUCT_NAME := lineage_shiba
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400

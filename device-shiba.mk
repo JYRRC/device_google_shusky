@@ -17,6 +17,9 @@
 TARGET_KERNEL_DIR ?= device/google/shusky-kernel
 TARGET_BOARD_KERNEL_HEADERS := device/google/shusky-kernel/kernel-headers
 
+# Kernel
+TARGET_PREBUILT_KERNEL := device/google/shusky-kernel/Image.lz4
+
 LOCAL_PATH := device/google/shusky
 
 $(call inherit-product-if-exists, vendor/google_devices/shusky/prebuilts/device-vendor-shiba.mk)
